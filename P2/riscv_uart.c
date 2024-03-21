@@ -103,5 +103,14 @@ int8_t riscv_print_string(char* str)
 }
 
 uint32_t riscv_get_line(char* str){
-    //TODO
+	uint32_t i = 0;
+	while(1){
+		str[i] = riscv_getchar();
+		if(str[i] !='\n'){
+			break;
+		}
+		i++;
+	}
+	str[i+1] ='\0';
+	return i;
 }
