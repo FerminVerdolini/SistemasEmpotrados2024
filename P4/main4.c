@@ -13,6 +13,10 @@ int main()
 		current = GetUniversalTime_Y2K();
 		print_date_time_from_Y2K( current );
         
+        delay(10000000);
+        //Una o la otra
+        wait_until(get_ticks_from_reset() + 10000000);
+
 		// Modify if necessary
         
 	} while ( 1 );
