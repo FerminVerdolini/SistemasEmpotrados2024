@@ -24,7 +24,7 @@ int main()
 	enable_timer_clinc_irq();
 	enable_irq();	          // Global interrupt enable
 
-	while( 1){
+	while(1){
         if(flag1){
             flag1 = 0;
         	printf("msg 1");
